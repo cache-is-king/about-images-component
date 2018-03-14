@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About Component should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <About
+    photo={
+      Array [
+        "https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream1.jpeg",
+        "https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream2.jpeg",
+        "https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream3.jpeg",
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="restaurant"
+        >
+          <div
+            className="line"
+          />
+        </div>,
+        <div
+          className="rowAbout"
+        >
+          <div
+            className="description"
+          />
+        </div>,
+        <div
+          className="photo"
+        >
+          <img
+            className="photoOne"
+            src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream1.jpeg"
+          />
+          <img
+            className="photoTwo"
+            src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream2.jpeg"
+          />
+          <img
+            className="photoThree"
+            src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream3.jpeg"
+          />
+        </div>,
+      ],
+      "className": "aboutWrap",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            undefined,
+            <div
+              className="line"
+            />,
+          ],
+          "className": "restaurant",
+        },
+        "ref": null,
+        "rendered": Array [
+          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "line",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="description"
+          />,
+          "className": "rowAbout",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "description",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              className="photoOne"
+              src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream1.jpeg"
+            />,
+            <img
+              className="photoTwo"
+              src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream2.jpeg"
+            />,
+            <img
+              className="photoThree"
+              src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream3.jpeg"
+            />,
+          ],
+          "className": "photo",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "photoOne",
+              "src": "https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream1.jpeg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "photoTwo",
+              "src": "https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream2.jpeg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "photoThree",
+              "src": "https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream3.jpeg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="restaurant"
+          >
+            <div
+              className="line"
+            />
+          </div>,
+          <div
+            className="rowAbout"
+          >
+            <div
+              className="description"
+            />
+          </div>,
+          <div
+            className="photo"
+          >
+            <img
+              className="photoOne"
+              src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream1.jpeg"
+            />
+            <img
+              className="photoTwo"
+              src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream2.jpeg"
+            />
+            <img
+              className="photoThree"
+              src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream3.jpeg"
+            />
+          </div>,
+        ],
+        "className": "aboutWrap",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              undefined,
+              <div
+                className="line"
+              />,
+            ],
+            "className": "restaurant",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "line",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="description"
+            />,
+            "className": "rowAbout",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "description",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                className="photoOne"
+                src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream1.jpeg"
+              />,
+              <img
+                className="photoTwo"
+                src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream2.jpeg"
+              />,
+              <img
+                className="photoThree"
+                src="https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream3.jpeg"
+              />,
+            ],
+            "className": "photo",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "photoOne",
+                "src": "https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream1.jpeg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "photoTwo",
+                "src": "https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream2.jpeg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "photoThree",
+                "src": "https://s3-us-west-1.amazonaws.com/imagesfornamson/icecream3.jpeg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
