@@ -3,7 +3,7 @@ const db = require('../db/database.js');
 const mongoose = require('mongoose');
 const seed = require('../db/database.js');
 
-describe('seeded data should be inserted properly', () => {
+xdescribe('seeded data should be inserted properly', () => {
   test('seeded data should be inserted properly', (done) => {
     db.find({}, (err, data) => {
       if (err) {
