@@ -7,13 +7,13 @@ import SideBar from '../client/src/SideBar.jsx';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('About Component', () => {
+xdescribe('About Component', () => {
   test('should render correctly', () => {
     expect(shallow(<SideBar />)).toMatchSnapshot();
   });
 });
 
-describe("rendered `SideBar`", () => {
+xdescribe("rendered `SideBar`", () => {
   it("received five props", () => {
     const component = shallow(<SideBar />);
     // console.log(component.props().children) 
