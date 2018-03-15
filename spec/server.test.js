@@ -12,7 +12,7 @@ xdescribe('should send back a 200 if static file is found', () => {
   });
 });
 
-describe('should receive a 404 if route isnt correct', () => {
+xdescribe('should receive a 404 if route isnt correct', () => {
   test('should receive a 404 from bad url', (done) => {
     request(app).get('/gibberish').then((response) => {
       expect(response.statusCode).toBe(404);

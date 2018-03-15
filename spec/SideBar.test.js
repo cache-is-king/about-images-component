@@ -8,15 +8,15 @@ import SideBar from '../client/src/SideBar.jsx';
 Enzyme.configure({ adapter: new Adapter() });
 
 xdescribe('About Component', () => {
-  test('should render correctly', () => {
-    expect(shallow(<SideBar />)).toMatchSnapshot();
+  xtest('should render correctly', () => {
+    xexpect(shallow(<SideBar />)).toMatchSnapshot();
   });
 });
 
 xdescribe("rendered `SideBar`", () => {
-  it("received five props", () => {
+  xit("received five props", () => {
     const component = shallow(<SideBar />);
     // console.log(component.props().children) 
-    expect(component.props().children.length).toBe(5);
+    xexpect(component.props().children.length).toBe(5);
   });
 });
