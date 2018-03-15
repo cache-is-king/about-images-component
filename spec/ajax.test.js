@@ -4,7 +4,7 @@ const sampleData = require('../data/sampleData.js');
 
 const BASE_URL = process.env.BASE_URL ? process.env.BASE_URL : '';
 
-describe("with fake server", function() {
+xdescribe("with fake server", function() {
   const data = sampleData[0];
   let server;
 
