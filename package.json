@@ -8,7 +8,8 @@
     "test": "jest",
     "dev": "webpack -d --watch",
     "server": "nodemon server/server.js",
-    "seed": "node milseed.js",
+    "generate": "node milseed.js",
+    "seed": "mongoimport --numInsertionWorkers 4 --db restaurant  --collection abouts --file millis/send.json",
     "build-prod": "./node_modules/.bin/webpack --config ./webpack.production.config.js",
     "build": "webpack -p"
   },

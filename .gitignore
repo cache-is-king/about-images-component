@@ -1,7 +1,6 @@
 node_modules/
 
 .env
-
 millis
 
 client/dist/bundle.js
