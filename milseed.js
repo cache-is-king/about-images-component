@@ -20,13 +20,11 @@ const create = (start, length) => {
   }
   return storage;
 };
+
 const seedDatabase = (creationFunction, creationAmountForEach, creationLimit) => {
   let i = 0;
-  const whos = ['homie', 'young g', 'broski', 'bro', 'fam', 'dawg'];
   let eachStartPoint = 0;
   while (i < creationLimit) {
-    const who = whos[Math.floor(Math.random() * whos.length)];
-    console.log(i, 'thank you for your patience', who);
     const amountOfRestaurants = creationFunction(eachStartPoint, creationAmountForEach);
     fs.writeFileSync(`./millis/send-${i}.json`, JSON.stringify(amountOfRestaurants));
     i += 1;
