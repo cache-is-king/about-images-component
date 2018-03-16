@@ -1,8 +1,4 @@
-- npm run generate
-
-- After generate is complete, While in repo directory: 
-
--npm run seed  
+- npm run generate 
 
 - check db:
 
