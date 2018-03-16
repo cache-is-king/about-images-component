@@ -1,7 +1,7 @@
 const faker = require('Faker');
 const fs = require('fs');
 
-const file = fs.createWriteStream('./millis/send.json');
+const file = fs.createWriteStream('./millions/send.json');
 
 const create = (i) => {
   const storage =
