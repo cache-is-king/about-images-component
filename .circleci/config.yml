@@ -9,7 +9,6 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:8.9.4
-      - image: redis:2.8.0
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -30,6 +29,7 @@ jobs:
           - v1-dependencies-
               
       - run: npm install
+          command: dockerize -wait tcp://localhost:6379 -timeout 1m
 
       - save_cache:
           paths:
