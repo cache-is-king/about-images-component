@@ -29,6 +29,9 @@ jobs:
           - v1-dependencies-
               
       - run: npm install
+
+      - run:
+          name: Wait for redis
           command: dockerize -wait tcp://localhost:6379 -timeout 1m
 
       - save_cache:
