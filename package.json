@@ -8,7 +8,9 @@
     "test": "jest",
     "dev": "webpack -d --watch",
     "server": "nodemon server/server.js",
-    "seed": "node milseed.js",
+    "generate": "npm run makeModel && mkdir millions && node milseed.js && npm run seed",
+    "makeModel": "node establishModel.js",
+    "seed": "mongoimport --numInsertionWorkers 4 --db restaurant  --collection abouts --file millions/send.json",
     "build-prod": "./node_modules/.bin/webpack --config ./webpack.production.config.js",
     "build": "webpack -p"
   },

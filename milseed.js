@@ -2,38 +2,6 @@ const faker = require('faker');
 const fs = require('fs');
 const Promise = require('bluebird');
 
-const create = (start, length) => {
-  const storage = [];
-  for (let i = start; i < start + length; i += 1) {
-    storage.push({
-      id: i,
-      name: faker.Company.companyName(),
-      about: {
-        description: faker.Lorem.paragraph(),
-        hours: `${faker.random.number()}-${faker.random.number()}`,
-        price: `${faker.random.number()}-${faker.random.number()}`,
-        style: `${faker.random.number()}-${faker.random.number()}`,
-        phone: `${faker.PhoneNumber.phoneNumber()}`,
-      },
-      banner: [`${faker.Image.imageUrl()}`, `${faker.Image.imageUrl()}`, `${faker.Image.imageUrl()}`, `${faker.Image.imageUrl()}`],
-      photo: [`${faker.Image.imageUrl()}`, `${faker.Image.imageUrl()}`, `${faker.Image.imageUrl()}`],
-    });
-  }
-  return storage;
-};
-
-const seedDatabase = (creationFunction, creationAmountForEach, creationLimit) => {
-  let i = 0;
-  let eachStartPoint = 0;
-  while (i < creationLimit) {
-    const amountOfRestaurants = creationFunction(eachStartPoint, creationAmountForEach);
-    fs.writeFileSync(`./millis/send-${i}.json`, JSON.stringify(amountOfRestaurants));
-    i += 1;
-    eachStartPoint = creationAmountForEach + eachStartPoint;
-  }
-};
-seedDatabase(create, 200000, 50);
-
 const file = fs.createWriteStream('./millions/send.json');
 
 if (process.argv[2] === 'MONGO') {
