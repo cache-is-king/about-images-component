@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGOLOCAL).then(() => {
     },
     banner: [],
     photo: [],
-  });
+  }).index({ name: 1 });
   const About = mongoose.model('About', aboutSchema);
   About.init().then(() => {
     mongoose.disconnect();
