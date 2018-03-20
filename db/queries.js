@@ -41,7 +41,7 @@ const findOne = (obj, cb) => {
 const findOnePostGres = (val, cb) => {
   redis.get(val, (err, reply) => {
     if (err || reply === null) {
-      postDb.query('SELECT * FROM abouts WHERE name = $1', [val], (error, doc) => {
+      postDb.query('SELECT * FROM restaurants WHERE name = $1', [val], (error, doc) => {
         if (error) {
           cb(error, null);
         } else {

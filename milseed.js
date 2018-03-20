@@ -42,16 +42,15 @@ if (process.argv[2] === 'POST') {
     let storage = '';
     if (type === 'info') {
       storage =
-        `${i}, ${faker.company.companyName()}, ${faker.lorem.paragraph()} , ${faker.random.number(12)}-${faker.random.number(12)},
-        ${faker.random.number(100)}, ${faker.lorem.word()}, ${faker.phone.phoneNumber()}`;
+        `${i}#${faker.company.companyName()}#${faker.lorem.paragraph()}#${faker.random.number(12)}-${faker.random.number(12)}#${faker.random.number(100)}#${faker.lorem.word()}#${faker.phone.phoneNumber()}#${i}#${i}`;
     }
     if (type === 'banner') {
       storage =
-        `${i}, ${faker.image.imageUrl()}, ${faker.image.imageUrl()}, ${faker.image.imageUrl()}, ${faker.image.imageUrl()}`;
+        `${i}#${faker.image.imageUrl()}#${faker.image.imageUrl()}#${faker.image.imageUrl()}#${faker.image.imageUrl()}`;
     }
     if (type === 'photo') {
       storage =
-        `${i}, ${faker.image.imageUrl()}, ${faker.image.imageUrl()}, ${faker.image.imageUrl()}`;
+        `${i}#${faker.image.imageUrl()}#${faker.image.imageUrl()}#${faker.image.imageUrl()}`;
     }
     return storage;
   };
