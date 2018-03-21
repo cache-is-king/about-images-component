@@ -25,7 +25,9 @@ class SummaryView extends React.Component {
   }
 
   fetch() {
+    console.log(this.state.id);
     ajax.get(this.state.id, (err, data) => {
+
       if (err) {
         throw err;
       } else {

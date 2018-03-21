@@ -1,0 +1,19 @@
+config:
+  target: 'http://localhost:8081'
+  phases:
+    - duration: 20
+      arrivalRate: 10
+  defaults:
+    # headers:
+    #   x-my-service-auth: '987401838271002188298567'
+  payload:
+      # path is relative to the location of the test script
+    path: "./names.csv"
+    fields:
+      - "name"
+scenarios:
+  - flow:
+    - loop:
+      - get:
+         url: "/?={{ name }}"
+      count: 10000

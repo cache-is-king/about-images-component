@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const redisClient = require('redis').createClient;
-const postDb = require('./db.js');
 
 const redis = redisClient(6379, 'localhost');
 
@@ -28,7 +27,7 @@ const findOne = (obj, cb) => {
         if (error) {
           cb(error, null);
         } else {
-          redis.set(obj.name, JSON.stringify(doc), () => {
+          redis.setex(obj.name, 5, JSON.stringify(doc), () => {
             cb(error, doc);
           });
         }
@@ -38,22 +37,5 @@ const findOne = (obj, cb) => {
     }
   });
 };
-const findOnePostGres = (val, cb) => {
-  redis.get(val, (err, reply) => {
-    if (err || reply === null) {
-      postDb.query('SELECT * FROM abouts WHERE name = $1', [val], (error, doc) => {
-        if (error) {
-          cb(error, null);
-        } else {
-          redis.set(val, JSON.stringify(doc), () => {
-            cb(error, doc);
-          });
-        }
-      });
-    } else if (reply) {
-      cb(err, JSON.parse(reply));
-    }
-  });
-};
-module.exports.findOnePostGres = findOnePostGres;
+
 module.exports.findOne = findOne;

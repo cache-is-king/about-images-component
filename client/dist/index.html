@@ -11,8 +11,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="bundle.js" type="text/javascript"></script>
     <script>
-      const num = 'Morar, Cassin and Ankunding';
-      // const num = window.location.search.slice(4) || 305
+      // const num = 'Morar, Cassin and Ankunding';
+      const num = window.location.search.slice(2) || 305;
       ReactDOM.render(
           React.createElement(SummaryView, { id: num }, null),
           document.getElementById('main')
