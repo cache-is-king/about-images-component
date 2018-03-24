@@ -4,7 +4,7 @@ const $ = require('jquery');
 
 const get = (id, cb) => {
   $.ajax({
-    url: `/restaurants/${id}`,
+    url: `/restaurants/${id}/abouts`,
     method: 'GET',
     success: (data) => {
       cb(null, data);

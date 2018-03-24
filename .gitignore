@@ -2,7 +2,7 @@ node_modules/
 
 .env
 millions
-
+db/names.csv
 client/dist/bundle.js
 client/dist/bundle-prod.js
 

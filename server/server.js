@@ -46,7 +46,7 @@ http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/javascript' });
     stream.pipe(res);
   } else if (url.match('.css')) {
-    const stream = fs.createReadStream(path.join(__dirname, '../client/dist/styles.css'), 'utf8')
+    const stream = fs.createReadStream(path.join(__dirname, '../client/dist/styles.css'), 'utf8');
     res.writeHead(200, { 'Content-Type': 'text/css' });
     stream.pipe(res);
   } else if (url.startsWith('/favicon.ico')) {
