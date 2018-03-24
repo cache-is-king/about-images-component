@@ -57,7 +57,6 @@ http.createServer((req, res) => {
     const term = body[2];
     const newTerm = term.split('%20');
     const searchTerm = newTerm.join(' ');
-    console.log(searchTerm);
     if (typeof Number(searchTerm) === 'number' && !isNaN(Number(searchTerm))) {
       redis.get(searchTerm, (err, reply) => {
         if (reply === null) {
@@ -67,10 +66,9 @@ http.createServer((req, res) => {
               res.writeHead(404);
               res.end();
             } else {
-              redis.setex(searchTerm, 5, JSON.stringify(doc), () => {
-                res.writeHead(200, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify(doc));
-              });
+              redis.setex(searchTerm, 5, JSON.stringify(doc));
+              res.writeHead(200, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify(doc));
             }
           });
         } else if (reply) {
@@ -78,7 +76,7 @@ http.createServer((req, res) => {
           res.writeHead(200, { 'Content-Type': 'application/json' });
           res.end(JSON.parse(reply));
         }
-      }); 
+      });
     } else {
       redis.get(searchTerm, (err, reply) => {
         if (reply === null) {
@@ -88,10 +86,9 @@ http.createServer((req, res) => {
               res.writeHead(404);
               res.end();
             } else {
-              redis.setex(searchTerm, 5, JSON.stringify(doc), () => {
-                res.writeHead(200, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify(doc));
-              });
+              redis.setex(searchTerm, 5, JSON.stringify(doc));
+              res.writeHead(200, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify(doc));
             }
           });
         } else if (reply) {
