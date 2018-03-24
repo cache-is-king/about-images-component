@@ -1,8 +1,9 @@
 node_modules/
-
+newrelic_agent.log
+newrelic.js
 .env
 millions
-
+db/names.csv
 client/dist/bundle.js
 client/dist/bundle-prod.js
 

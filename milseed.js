@@ -2,9 +2,10 @@ const faker = require('faker');
 const fs = require('fs');
 const Promise = require('bluebird');
 
-const file = fs.createWriteStream('./millions/send.json');
 
 if (process.argv[2] === 'MONGO') {
+  const file = fs.createWriteStream('./millions/send.json');
+
   const create = (i) => {
     const storage =
     {
@@ -78,4 +79,29 @@ if (process.argv[2] === 'POST') {
     Promise.all(activations);
   };
   activate();
+}
+
+if (process.argv[2] === 'NAME') {
+  const createName = (i) => {
+    const storage = `${faker.company.companyName()}`;
+    return storage;
+  };
+  const seedNames = (creationFunction, currentFile, creationLimit, i) => {
+    let space = true;
+    while (i < creationLimit && space) {
+      const name = creationFunction(i);
+      space = currentFile.write(`${name}\n`);
+      i += 1;
+    }
+    if (i < creationLimit) {
+      currentFile.once('drain', () => {
+        seedNames(createName, currentFile, creationLimit, i);
+      });
+    }
+  };
+  const activator = () => {
+    const nameFile = fs.createWriteStream('./db/names.csv');
+    seedNames(createName, nameFile, 1000000, 0);
+  };
+  activator();
 }

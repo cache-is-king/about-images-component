@@ -11,6 +11,7 @@
     "seed": "node milseed.js",
     "generatePost": "mkdir millions && node milseed.js POST",
     "generateMongo": "npm run makeModel && mkdir millions && node milseed.js MONGO && npm run seed",
+    "generateNames": "node milseed.js NAME",
     "makeModel": "node establishModel.js",
     "makeSchema": "node establishSchema.js",
     "seed": "mongoimport --numInsertionWorkers 4 --db restaurant  --collection abouts --file millions/send.json",
